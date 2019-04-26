@@ -3,15 +3,11 @@ import "./style.css";
 
 function FriendCard(props) {
   return (
-    // <div>
-    //   <nav class="navbar navbar-light bg-light">
-    //       <a class="navbar-brand" href="#">Clicky Game!</a>
-    //     </nav>
-    // </div>
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
+    <span onClick={() => props.clickedFriend(props.id)} className="clicked">
+      <div className="card">
+        <div className="img-container">
+          <img alt={props.name} src={props.image} />
+        </div>
       {/* <div className="content">
         <ul>
           <li>
@@ -25,10 +21,9 @@ function FriendCard(props) {
           </li>
         </ul>
       </div> */}
-      <span onClick={() => props.clickedFriend(props.id)} className="remove">
-        𝘅
-      </span>
-    </div>
+     
+      </div>
+    </span>
   );
 }
 

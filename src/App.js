@@ -5,7 +5,6 @@ import Title from "./components/Title";
 import friends from "./friends.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     friends,
     clickedId: [],
@@ -15,7 +14,7 @@ class App extends Component {
 
   clickedFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    // const friends = this.state.friends.filter(friend => friend.id !== id);
+  
     let array = this.state.friends;
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -43,12 +42,24 @@ class App extends Component {
     //array for if id of clicked friend is equal to the id of the alreadyclicked then you lose
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
+
+    
+
       <Wrapper>
+          <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Navbar</a>
+          </nav>
         
-        <Title>Your choice! Try not to click on the same F.R.I.E.N.D. twice!</Title>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+            <h1 class="display-4">F.R.I.E.N.D.S Clicker Game!</h1>
+            <p class="lead">Click on an image to start! Try not to click the same friend twice :) Good luck!</p>
+            </div>
+          </div>
+        
+        <Title></Title>
         {this.state.friends.map(friend => (
           <FriendCard
             clickedFriend={this.clickedFriend}
