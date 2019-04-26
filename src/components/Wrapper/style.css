@@ -1,6 +1,6 @@
 .wrapper {
   /* padding-top: 50px; */
-  background: #ECEFF1;
+  
   height: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -18,4 +18,8 @@
 
 .bg-light {
   background-color: rgba(74, 72, 72, 0.639)!important;
+}
+
+.jumbotron {
+  width: 100%;
 }

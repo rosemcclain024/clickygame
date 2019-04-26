@@ -49,7 +49,7 @@ class App extends Component {
 
       <Wrapper>
           <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand">Navbar</a>
+            <a class="navbar-brand">Clicky Game!</a>
           </nav>
         
           <div class="jumbotron jumbotron-fluid">
@@ -59,7 +59,7 @@ class App extends Component {
             </div>
           </div>
         
-        <Title></Title>
+      
         {this.state.friends.map(friend => (
           <FriendCard
             clickedFriend={this.clickedFriend}
